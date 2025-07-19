@@ -215,18 +215,31 @@ box-shadow: 0 4px 12px rgba(0,0,0,0.2);
  }
 
  .project-container{
-    dipslay:flex;
+   overflow-x: auto;
+   scroll-snap-type:x mandatory;
+   display:flex;
     flex-wrap: wrap;
     gap: 2rem;
+    padding : 1rem;
+    scroll-behavior:smooth;
     justify-content:center;
  }
 
  .project-card{
+   flex: 0 0 auto;
+   scroll-snap-align: start;
     background: #47474682;
     border-radius:10px;
     padding: 1rem 1.5rem;
     width: 300px;
     transition: transform 0.3s ease;
+ }
+ .project-container::-webkit-scrollbar{
+   height: 8px;
+ }
+ .project-container::-webkit-scrollbar-thumb{
+background-color: #202A44;
+border-radius: 4px;
  }
 
  .project-card:hover{
