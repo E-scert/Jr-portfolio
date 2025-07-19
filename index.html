@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <title>JR's PortFolio</title>
+        <link rel="stylesheet" href="portfolioStyle.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+    </head>
+    <body>
+        <header>
+
+            <div class="header-content">
+                <div class="profile-name">
+             <!-- /*<img src="Snapchat-1773887508.jpg" alt="Uhone's Profile Picture" class="profile-pic">*/ -->
+            <h1>Jr' PortFolio</h1>
+                </div>
+             
+            </div>
+            
+            
+            <nav>
+                <a href="#hero" id="link-hero" onclick="scrollTosection('hero')">Hero</a>
+                <a href="#about" id="link-about"  onclick="scrollTosection('about')">About</a>
+                <a href="#skills" id="link-skills"  onclick="scrollTosection('skills')">Skills</a>
+                <a href="#Projects" id="link-project" onclick="scrollTosection('Projects')">Projects</a>
+                <a href="#contact" id="link-contact"  onclick="scrollTosection('contact')">Contact</a>
+
+            </nav>
+        </header>
+        <div class="slide-controls">
+            <button onclick="navigateSlides(-1)" > <- </button>
+            <button onclick="navigateSlides(1)" >-> </button>
+       
+        </div>
+
+        <div class="horizon-scroll">
+            
+         <section id = "hero">
+           <div class="hero-content">
+            <div class="hero-text">
+              <h2>Hi, I'M Uhone Prince</h2>
+              <p>Backend Developer | Java & SQL Enthusiast</p>
+            </div>
+            <img src="Snapchat-1546625116.jpg" alt="myimage" class="hero-image">
+            
+
+           </div>
+           
+        </section>
+
+        <section id = "about">
+            <h2>About Me</h2>
+            <p>I love solving problems through code and building efficeintbackend systems.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Java</li>
+                <li>SQL</li>
+                <li>NetBeans</li>
+                <li>Database Design</li>
+                
+            </ul>
+        </section>
+
+        <section id="Projects">
+            <h2>Projects</h2>
+            <p>Coming soon...</p>
+        </section>
+
+        <section id = "contact">
+            <h2>Contact</h2>
+            <p>Email:<a href="mailto:uhoneprincemulaudzi@jmail.com">uhoneprincemulaudzi@gmail.com</a></p>
+            <p>Github: <a href="https://github.com/E-scert" target="_blank">github.com/E-scert</a></p>
+            <p>Cell no:0717803663</p>
+        </section>
+
+        </div>
+        
+        <footer>
+            <p>&copy; JR 2025</p>
+            <p> <a href="https://github.com/E-scert" target="_blank">View My GitHub</a></p>
+        </footer>
+
+        <!-- script -->
+         <script>
+            const scrollContainer = document.querySelector('.horizon-scroll');
+            const sections = document.querySelector('.horizon-scroll');
+
+            function scrollTosection(id){
+                const targetIndex = [...sections].findIndex(sec => sec.id === id);
+                const offset = tagetIndex * window.innerWidth;
+                scrollContainer.style.transform = 'translateX(-${offset}px)';
+            }
+
+            //  const links = document.querySelectorAll('nav a');
+            // function scrollTosection(id){
+
+            //     const index = [ document.querySelectorAll('.horizon-scroll section')].findIndex(sec => sec.id === id);
+            //     document.queraSelector('.horizon-scroll').style.transform = 'translateX(-${index * window.innerWidth}px)';
+
+            //     links.forEach(link => link.classList.remove('active'));
+            // documeent.querySelector('#link-${id}').classList.add('active');
+            // }
+         </script>
+
+        
+    </body>
