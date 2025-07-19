@@ -214,4 +214,37 @@ box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     color:#fff;
  }
 
+ .project-container{
+    dipslay:flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content:center;
+ }
+
+ .project-card{
+    background: #47474682;
+    border-radius:10px;
+    padding: 1rem 1.5rem;
+    width: 300px;
+    transition: transform 0.3s ease;
+ }
+
+ .project-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+ }
+
+ .tech-tags li{
+    display: inline-block;
+    background-color: #84a2ef;
+    color : rgb(43, 41, 41);
+    padding : 0.2rem 0.6rem;
+    margin: 0.2rem;
+    border-radius: 5px;
+    font-size:0.8rem;
+ }
+ h3{
+    color:#00bcd4;
+ }
+
 
